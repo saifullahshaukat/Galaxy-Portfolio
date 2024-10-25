@@ -112,13 +112,19 @@ window.addEventListener('resize', () => {
 
 
 
-
 const scaleBox = document.querySelector('.about_grid');
 const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 const aboutSecDiv = document.querySelector('.about_sec_div');
 const aboutSecDivElements = aboutSecDiv.querySelectorAll('h2, p, .img-fluid, .wrapper');
 const aboutFadeInClass = document.querySelector('.about-fade-in-class');
 const aboutFadeInClassElements = aboutFadeInClass.querySelectorAll('*'); // Select all elements inside aboutFadeInClass
+
+// Initially hide the aboutFadeInClass and its elements
+aboutFadeInClass.style.display = 'none';
+aboutFadeInClassElements.forEach(element => {
+    element.style.display = 'none';
+    element.style.opacity = 0;
+});
 
 // Function to adjust the scale and opacity based on scroll position
 function adjustScaleOnScroll() {
@@ -152,6 +158,7 @@ function adjustScaleOnScroll() {
         });
 
         // Hide the aboutFadeInClass elements
+        aboutFadeInClass.style.display = 'none';
         aboutFadeInClassElements.forEach(element => {
             element.style.opacity = 0;
             element.style.display = 'none';
@@ -166,6 +173,7 @@ function adjustScaleOnScroll() {
         });
 
         // Show the aboutFadeInClass elements with a fade-in effect based on scroll position
+        aboutFadeInClass.style.display = 'grid';
         const fadeInOpacity = Math.min(1, (scrollTop - endScroll) / (window.innerHeight)); // Adjust fade-in speed
         aboutFadeInClassElements.forEach(element => {
             element.style.display = 'block';
@@ -183,11 +191,9 @@ window.addEventListener('scroll', adjustScaleOnScroll);
 
 
 
-
-
 const sectionBanner = document.querySelector('.section-banner');
-let bannerX = window.innerWidth / 2;
-let bannerY = window.innerHeight / 2;
+let bannerX = Math.random() * (window.innerWidth - sectionBanner.offsetWidth);
+let bannerY = Math.random() * (window.innerHeight - sectionBanner.offsetHeight);
 let bannerSpeedX = 2;
 let bannerSpeedY = 2;
 let isDragging = false;
@@ -211,7 +217,7 @@ function moveBanner() {
     bannerY = Math.max(0, Math.min(bannerY, window.innerHeight - sectionBanner.offsetHeight));
 
     sectionBanner.style.left = `${bannerX}px`;
-    sectionBanner.style.top = `${bannerY}px`; // Remove window.scrollY adjustment
+    sectionBanner.style.top = `${bannerY}px`;
 
     requestAnimationFrame(moveBanner);
 }

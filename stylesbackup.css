@@ -1,0 +1,555 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 56px !important;
+  font-weight: 900;
+}
+
+a.button {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+a.header_btn {
+  margin: 32px auto 0 auto;
+}
+
+.home__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__data h5{
+  margin-top: 20px;
+}
+.navbar-brand {
+  margin-right: 0 !important;
+}
+
+.section {
+  padding: 20px 0;
+  margin: 20px auto; /* Space around sections */
+}
+
+.home {
+  background-color: transparent; /* Darker background for home section */
+  color: white; /* White text color */
+}
+
+.navbar-nav {
+  margin: 0 auto 0 390px;
+}
+
+.about.section{
+  margin: 0;
+}
+.about .container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 700vh; /* Ensure parent has a height */
+}
+
+.about__description{
+  margin-bottom: 60px;
+}
+
+.about h2{
+  margin-top: 40px;
+}
+.about p{
+  margin: 10px 80px;
+}
+
+.about_grid {
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr);
+  position: sticky !important;
+  bottom: 22vh; /* Changed from top to bottom */
+  margin: 10px 0;
+      transition: transform 0.1s ease;
+}
+
+.about_sec_div:hover {
+  background-color: var(--glow-color);
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+
+
+.about_sec_div {
+  --glow-color: rgb(25, 25, 25);
+  grid-column: 3/11;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60), inset 0 0 10px rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  margin: 0;
+  backdrop-filter: blur(1px); 
+  transition: background-color 0.2s ease-in-out;
+}
+.about-fade-in-class{
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: start;
+}
+
+.about-fade-in-class .about_dp{
+  
+  margin: 20px auto 0 auto;
+  width: 100px;
+}
+
+
+#searchForm {
+  display: none;
+  background-color: transparent; /* Dark background to match navbar */
+  color: white; /* White text color */
+  border: none; /* Border color */
+  padding: 0; /* Padding for better spacing */
+}
+
+#searchForm input {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly white with transparency */
+  backdrop-filter: blur(5px); /* Darker background for input */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  padding-left: 20px;
+}
+
+#searchForm input::placeholder {
+  margin-left: 50px;
+  color: #ced4da; /* Placeholder text color */
+}
+
+
+.img-fluid {
+  width: 200px;
+  height: auto;
+}
+
+.card {
+  width: 100%;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+  margin: 30px auto 80px auto;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 .5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: .2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 .5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scaleX(.2);
+    opacity: .4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: .3s;
+}
+
+
+.follow-button {
+  position: relative;
+  padding: 10px 30px;
+  background: black;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  border: 3px solid white;
+  border-radius: 19px;
+  box-shadow: 0 0 0 white8c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.star-1, .star-2, .star-3, .star-4, .star-5, .star-6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  opacity: 0 !important; /* Initially hidden */
+}
+
+button:hover {
+  background: transparent;
+  color: white;
+  box-shadow: 0 0 25px white8c;
+}
+
+button:hover .star-1,
+button:hover .star-2,
+button:hover .star-3,
+button:hover .star-4,
+button:hover .star-5,
+button:hover .star-6 {
+  opacity: 1 !important; /* Show stars on hover */
+}
+
+button:hover .star-1 {
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  top: -40%;
+  left: 16%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  top: 95%;
+  left: 2%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  top: -70%;
+  left: 75%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  top: 35%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  top: 75%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
+}
+
+
+
+
+
+
+
+/* === removing default button style ===*/
+.button {
+  margin: 20px 0 0 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.section-banner {
+  height: 250px;
+  width: 250px;
+  position: fixed;
+  top: 0;
+    left: 0;
+    pointer-events: none; /* Prevent interaction with any content */
+  transition: left 0.3s linear;
+  cursor: grab;
+  background: url("/assets/img/earth.jpg");
+  background-size: cover;
+  background-position: left;
+  bottom: 0px;
+  border-radius: 50%;
+  animation: earthRotate 30s linear 0s infinite;
+  box-shadow: 0px 0 20px RGBA(255, 255, 255, 0.2), -5px 0px 8px #c3f4ff inset,
+    15px 2px 25px #000 inset, -24px -2px 34px #c3f4ff99 inset,
+    250px 0px 44px #00000066 inset, 150px 0px 38px #000000aa inset;
+  overflow: hidden !important; /* Prevent scroll bar */
+}
+
+body {
+  overflow-x: hidden !important; /* Prevent horizontal scroll bar */
+}
+
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.curved-corner-star {
+  display: flex;
+  position: relative;
+}
+
+#curved-corner-bottomleft,
+#curved-corner-bottomright,
+#curved-corner-topleft,
+#curved-corner-topright {
+  width: 4px;
+  height: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+#curved-corner-bottomleft:before,
+#curved-corner-bottomright:before,
+#curved-corner-topleft:before,
+#curved-corner-topright:before {
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 50%;
+}
+
+#curved-corner-bottomleft:before {
+  bottom: 0;
+  left: 0;
+  box-shadow: -5px 5px 0 0 white;
+}
+
+#curved-corner-bottomright:before {
+  bottom: 0;
+  right: 0;
+  box-shadow: 5px 5px 0 0 white;
+}
+
+#curved-corner-topleft:before {
+  top: 0;
+  left: 0;
+  box-shadow: -5px -5px 0 0 white;
+}
+
+#curved-corner-topright:before {
+  top: 0;
+  right: 0;
+  box-shadow: 5px -5px 0 0 white;
+}
+
+@keyframes twinkling {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+#star-1, #star-2, #star-3, #star-4, #star-5, #star-6, #star-7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px; /* Adjust size of stars */
+  height: 50px;
+  background-size: contain;
+  animation: star-move 20s linear infinite;
+  pointer-events: none; /* Prevent star interaction with content */
+}
+
+@keyframes star-move {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(100vh); /* Move the stars from top to bottom of viewport */
+  }
+}
+
+#star-1 {
+  position: absolute;
+  left: -20px;
+  animation: twinkling 3s infinite;
+}
+
+#star-2 {
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  animation: twinkling 2s infinite;
+}
+#star-3 {
+  position: absolute;
+  left: 350px;
+  top: 90px;
+  animation: twinkling 4s infinite;
+}
+#star-4 {
+  position: absolute;
+  left: 200px;
+  top: 290px;
+  animation: twinkling 3s infinite;
+}
+#star-5 {
+  position: absolute;
+  left: 50px;
+  top: 270px;
+  animation: twinkling 1.5s infinite;
+}
+
+#star-6 {
+  position: absolute;
+  left: 250px;
+  top: -50px;
+  animation: twinkling 4s infinite;
+}
+#star-7 {
+  position: absolute;
+  left: 290px;
+  top: 60px;
+  animation: twinkling 2s infinite;
+}

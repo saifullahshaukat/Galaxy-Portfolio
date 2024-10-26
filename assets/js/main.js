@@ -266,3 +266,14 @@ window.addEventListener('resize', () => {
 });
 
 moveBanner();
+
+
+
+
+
+
+
+
+
+
+

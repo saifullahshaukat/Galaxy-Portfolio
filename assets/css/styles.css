@@ -10,6 +10,10 @@ body {
   overflow-x: hidden !important; /* Prevent horizontal scroll bar */
 }
 
+:root{
+  --animation-color: #37FF8B;
+}
+
 h1 {
   font-size: 56px !important;
   font-weight: 900;
@@ -31,6 +35,18 @@ a.header_btn {
 
 .navbar-nav {
   margin: 0 auto 0 390px;
+}
+
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  color: var(--animation-color) !important;
+  border-bottom: 2px solid var(--animation-color);
+  padding: 0!important;
+  padding-top: 0.5rem!important;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
 }
 
 /* Section Styles */
@@ -91,6 +107,39 @@ a.header_btn {
 .about_sec_div:hover {
   background-color: var(--glow-color);
   transition: background-color 0.2s ease-in-out;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60), inset 0 0 10px white;
+}
+
+.about_sec_div:hover .blob::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 200px; /* Width of the inset shadow */
+  height: 4px; /* Height of the pseudo-element */
+  box-shadow: inset 0 0 10px var(--animation-color);
+  border-radius: 20px;
+  animation: insetGlow 2s infinite ease-in-out alternate;
+
+}
+
+@keyframes insetGlow {
+  0% {
+    top: 0;
+    left: 70%;
+  }
+  25% {
+
+  }
+  50% {
+
+  }
+  75% {
+
+  }
+  100% {
+
+  }
 }
 
 .about_sec_div {
@@ -101,6 +150,7 @@ a.header_btn {
   margin: 0;
   backdrop-filter: blur(1px); 
   transition: background-color 0.2s ease-in-out;
+  position: relative;
 }
 
 .about-fade-in-class {
@@ -122,8 +172,15 @@ a.header_btn {
 .cv_div_1{
   grid-column: 1/2;
   grid-row: 1/5;
-  background-color: hsla(0, 0%, 100%, 0.3);
+  background-color: Transparent;
+color: white;
   border-radius: 10px;
+}
+
+.cv_div_1:hover, .cv_div_2:hover, .cv_div_3:hover, .cv_div_4:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: inset 0 0 10px white;
 }
 
 .cv_div_1 .cv_div_1_first_h{
@@ -134,12 +191,12 @@ a.header_btn {
 .cv_div_1 .cv_div_1_second_h{
   font-size: 14px;
   text-align: left;
-  margin: 60px  10px 10px 10px;
+  margin: 40px  10px 10px 10px;
 }
 
 
 .about-fade-in-class .about_dp {
-  margin: 36px auto 0 auto;
+  margin: 26px auto 0 auto;
   width: 100px;
 }
 
@@ -148,7 +205,8 @@ a.header_btn {
 .cv_div_2{
   grid-column: 2/3;
   grid-row: 1/3;
-  background-color: hsla(0, 0%, 100%, 0.3);
+  background-color: Transparent;
+color: white;
   border-radius: 10px;
 
 }
@@ -166,7 +224,8 @@ a.header_btn {
 .cv_div_3{
   grid-column: 2/3;
   grid-row: 3/5;
-  background-color: hsla(0, 0%, 100%, 0.3);
+  background-color: Transparent;
+color: white;
   border-radius: 10px;
 
 }
@@ -236,7 +295,8 @@ a.header_btn {
 .cv_div_4{
   grid-column: 3/5;
   grid-row: 1/5;
-  background-color: hsla(0, 0%, 100%, 0.3);
+  background-color: Transparent;
+color: white;
   border-radius: 10px;
 
 }
@@ -323,7 +383,7 @@ text-align: center;
 
 
 .cv_div_4 .cv_div_4_h5_2{
-  margin-top: 60px;
+  margin-top: 58px;
 }
 
 .cv_div_4_grid_2{
@@ -472,7 +532,6 @@ text-align: center;
   cursor: pointer;
   --border-right: 6px;
   --text-stroke-color: rgba(255,255,255,0.6);
-  --animation-color: #37FF8B;
   --fs-size: 2em;
   letter-spacing: 3px;
   text-decoration: none;

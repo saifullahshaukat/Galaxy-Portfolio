@@ -182,29 +182,8 @@ function adjustScaleOnScroll() {
     }
 }
 
-
 // Add the scroll event listener
 window.addEventListener('scroll', adjustScaleOnScroll);
-
-
-const aboutGrid = document.querySelector('.about_grid');
-const aboutSection = document.querySelector('.about.section');
-
-// Set the start and end points for sticking
-const startSticky = aboutSection.offsetTop; // The top position where sticky should begin
-const endSticky = startSticky + aboutSection.offsetHeight ; // The end position
-
-// Scroll event listener to toggle stickiness
-window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-
-    if (scrollTop >= startSticky && scrollTop <= endSticky) {
-        // Apply sticky positioning within the specified scroll range
-        aboutSection.style.position = 'sticky';
-        aboutGrid.style.top = '25vh'; // Adjust the 'top' value for where you want it to stick within the viewport
-    } 
-});
-
 
 
 
@@ -287,16 +266,6 @@ window.addEventListener('resize', () => {
 });
 
 moveBanner();
-
-
-
-
-
-
-
-
-
-
 
 
 

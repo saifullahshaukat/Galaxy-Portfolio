@@ -1,120 +1,21 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-  </head>
-  <body> 
-    <div class="skills">
-      <div class="skill">
-      <div class="outer">
-      <div class="inner">
-      <div id="number1" class="number">0%</div>
-      </div>
-      </div>
-      <p>Developer</p>
-      </div>
-      <div class="skill">
-      <div class="outer">
-      <div class="inner">
-      <div id="number2" class="number">0%</div>
-      </div>
-      </div>
-      <p>Project Manager</p>
-      </div>
-      <div class="skill">
-      <div class="outer">
-      <div class="inner">
-      <div id="number3" class="number">0%</div>
-      </div>
-      </div>
-      <p>Graphic Designer</p>
-      </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation Cards</title>
+    <link rel="stylesheet" href="abc.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+        <div class="card">Card 5</div>
+        <div class="card">Card 6</div>
+        <div class="card">Card 7</div>
     </div>
-
-    <style>
-      .skills {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin-top: 50px;
-      }
-      .skill {
-      text-align: center;
-      }
-      .outer {
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
-      padding: 10px;
-      background: conic-gradient(#37FF8B 0%, #cadcff 0%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      }
-      .inner {
-      height: 100%;
-      width: 100%;
-      background: #fff;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      }
-      .number {
-      font-size: 24px;
-      font-weight: bold;
-      }
-    </style>
-
-    <script>
-      function animateProgress(id, start, end, duration) {
-      let range = end - start;
-      let current = start;
-      let increment = end > start ? 1 : -1;
-      let stepTime = Math.abs(Math.floor(duration / range));
-      let obj = document.getElementById(id);
-      let timer = setInterval(function() {
-      current += increment;
-      obj.innerHTML = current + "%";
-      if (current == end) {
-      clearInterval(timer);
-      }
-      }, stepTime);
-      }
-
-      function animateBar(id, start, end, duration) {
-      let range = end - start;
-      let current = start;
-      let increment = end > start ? 1 : -1;
-      let stepTime = Math.abs(Math.floor(duration / range));
-      let obj = document.getElementById(id).parentElement.parentElement;
-      let timer = setInterval(function() {
-      current += increment;
-      obj.style.background = `conic-gradient(#37FF8B 0%, #37FF8B ${current}%, #cadcff ${current}%)`;
-      if (current == end) {
-      clearInterval(timer);
-      }
-      }, stepTime);
-      }
-
-      window.onload = function() {
-      animateProgress("number1", 0, 100, 2000);
-      animateProgress("number2", 0, 100, 2000);
-      animateProgress("number3", 0, 100, 2000);
-      animateBar("number1", 0, 100, 2000);
-      animateBar("number2", 0, 100, 2000);
-      animateBar("number3", 0, 100, 2000);
-      };
-    </script>
-    <script src="" async defer></script>
-  </body>
+    <script src="abc.js"></script>
+</body>
 </html>

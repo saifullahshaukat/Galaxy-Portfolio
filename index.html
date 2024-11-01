@@ -46,7 +46,8 @@
                </li>
             </ul>
          </div>
-         <button style="position: absolute; right: 1%; top: 0; margin-top: 10px !important;" class="btn btn-outline-light my-2 my-sm-0" type="button" id="searchButton">Search</button>
+         <button style="position: absolute; right: 1%; top: 0; margin-top: 10px !important;"
+            class="btn btn-outline-light my-2 my-sm-0" type="button" id="searchButton">Search</button>
          <form class="form-inline my-2 my-lg-0" id="searchForm" style="display: none;">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Go</button>
@@ -184,12 +185,14 @@
                      <div class="shadow"></div>
                      <div class="shadow"></div>
                   </div>
+
+                  <aside class="show">
                   <div class="about-fade-in-class">
 
                      <div class="cv_div_1">
                         <img class="about_dp" src="/assets/img/dp.jpeg" alt="">
                         <h5 class="cv_div_1_first_h">SAIFULLAH SHAUKAT</h5>
-                        <div class="cv_div_1_inner_div">
+                        <div class="cv_div_1_inner_div hidden">
                            <h5 class="cv_div_1_second_h">WHAT AM I?</h5>
                            <p>A Student, A Project Manager, An Expert Web Developer, A Graphic Designer, A Business
                               Strategist, Cricket Athlete & much More :)</p>
@@ -218,7 +221,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="cv_div_4">
+                     <div class="cv_div_4 hidden">
                         <h5>EXPERIENCE</h5>
                         <div class="cv_div_4_grid">
                            <div class="cv_div_4_grid_subdiv1">
@@ -283,6 +286,7 @@
 
                      </div>
                   </div>
+               </aside>
 
                </div>
 
@@ -294,11 +298,11 @@
 
       <!-- PORTFOLIO SECTION -->
       <section class="portfolio section fade-in" id="portfolio">
-         <div class="container">
+         <div class="portfolio_con container">
             <div class="portfolio-button">
-            <button class="button" data-text="Awesome">
-               <span class="actual-text portfolio-head">&nbsp;Portfolio&nbsp;</span>
-               <span aria-hidden="true" class="hover-text portfolio-head2">&nbsp;Portfolio&nbsp;</span>
+               <button class="button" data-text="Awesome">
+                  <span class="actual-text portfolio-head">&nbsp;Portfolio&nbsp;</span>
+                  <span aria-hidden="true" class="hover-text portfolio-head2">&nbsp;Portfolio&nbsp;</span>
 
             </div>
             </button>
@@ -308,8 +312,8 @@
                   <div class="card">
                      <img src="assets/img/project-1.jpg" class="card-img-top" alt="Project 1">
                   </div>
-                     <div class="card-title">
-                        <h5>FINANCE</h5>
+                  <div class="card-title">
+                     <h5>FINANCE</h5>
                   </div>
                </div>
                <!-- Portfolio Item 2 -->
@@ -317,8 +321,8 @@
                   <div class="card">
                      <img src="assets/img/project-2.png" class="card-img-top" alt="Project 2">
                   </div>
-                     <div class="card-title">
-                        <h5>CRYPTO</h5>
+                  <div class="card-title">
+                     <h5>CRYPTO</h5>
                   </div>
                </div>
                <!-- Portfolio Item 3 -->
@@ -326,8 +330,8 @@
                   <div class="card">
                      <img src="assets/img/project-3.jpg" class="card-img-top" alt="Project 3">
                   </div>
-                     <div class="card-title">
-                        <h5>HOME DECOR</h5>
+                  <div class="card-title">
+                     <h5>HOME DECOR</h5>
                   </div>
                </div>
 
@@ -336,8 +340,8 @@
                   <div class="card">
                      <img src="assets/img/project-7.png" class="card-img-top" alt="Project 7">
                   </div>
-                     <div class="card-title">
-                        <h5>E-COMMERCE</h5>
+                  <div class="card-title">
+                     <h5>E-COMMERCE</h5>
                   </div>
                </div>
                <!-- Portfolio Item 5 -->
@@ -345,8 +349,8 @@
                   <div class="card">
                      <img src="assets/img/project-8.jpg" class="card-img-top" alt="Project 8">
                   </div>
-                     <div class="card-title">
-                        <h5>TASK MANAGER</h5>
+                  <div class="card-title">
+                     <h5>TASK MANAGER</h5>
                   </div>
                </div>
                <!-- Portfolio Item 6 -->
@@ -354,8 +358,8 @@
                   <div class="card">
                      <img src="assets/img/project-9.png" class="card-img-top" alt="Project 9">
                   </div>
-                     <div class="card-title">
-                        <h5>DROPSHIPPING</h5>
+                  <div class="card-title">
+                     <h5>DROPSHIPPING</h5>
                   </div>
                </div>
             </div>
@@ -363,18 +367,43 @@
       </section>
 
 
+
+<section class="services">
+   <div class="card-container-ser">
+      <div class="card-ser">Card 1</div>
+      <div class="card-ser">Card 2</div>
+      <div class="card-ser">Card 3</div>
+      <div class="card-ser">Card 4</div>
+      <div class="card-ser">Card 5</div>
+      <div class="card-ser">Card 6</div>
+      <div class="card-ser">Card 7</div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                           crossorigin="anonymous">
-                           </script>
-                           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                              integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                              crossorigin="anonymous"></script>
-                           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                              integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                              crossorigin="anonymous"></script>
-                           <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-                           <script type="module" src="assets/js/main.js"></script>
+         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+         </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+         crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+      <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>
